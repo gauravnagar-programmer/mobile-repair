@@ -11,5 +11,8 @@ app.use(express.static(path.join(__dirname,"public")));
 app.get('/',(req,res)=>{
   res.render('home')
 })
+const port = process.env.PORT || 2000;
 
-app.listen(2000)
+app.listen(port,()=>{
+  console.log('server is runnig')
+})
